@@ -1,0 +1,41 @@
+.btn03{
+    border: 1px solid #333;
+    position: relative;
+    /* 影のpositionを決定するための起点 */
+    display: inline-block;
+    text-align: center;
+    background-color:transparent;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    /* borderを設定するためにわざわざ上層をspan以外につくった？？？？？？ */
+}
+.btn03:hover{
+    border-color: transparent;
+   
+}
+/* メインは下のspanである */
+.btn03 span{
+    position: relative;
+    z-index: 2;
+    /* 影のindexではなく手前のところに載せないといけないため */
+    display: block  ;
+    padding: 10px 30px;
+    color: #333;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+.pushdown::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    z-index: -1;
+}
+.pushdown:hover span{
+   background-color: #333;
+   color: #fff;
+   transform: translateY(4px);
+}

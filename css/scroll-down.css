@@ -1,0 +1,63 @@
+/* position relativeはどこ？？？？？ */
+
+
+.scrolldown2{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    z-index: 999;
+}
+.scrolldown2  span{
+    position: absolute;
+	left:10px;
+	bottom:10px;
+    color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+/* 以下点の描写 */
+.scrolldown2::before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #eee;
+    /* 位置 */
+    position: absolute;
+    left: -4px;
+    bottom: 0;
+
+
+    animation: circlemove 1.6s ease-in-out infinite,
+            circleopacity 1.6s ease-out infinite ;
+}
+@keyframes circlemove {
+    0%{
+        bottom: 45px;
+    }
+    100%{
+        bottom: -5px;
+    }
+}
+@keyframes circleopacity {
+    0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+	100%{opacity:0;}
+}
+
+/* 以下線の描写 */
+.scrolldown2::after{
+    content: "";
+    height: 50px;
+    width:2px ;
+    background-color: #eee;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 線はbottom left共に0にすることが多いのかな？ */
+}
