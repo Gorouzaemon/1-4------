@@ -1,3 +1,4 @@
+/*========= ローディング画面のためのCSS ===============*/
 #splash {
 	position: fixed;
 	width: 100%;
@@ -27,7 +28,7 @@ body.appear{
     background:#fff;/*画面を開いた後の背景色を指定*/
 }
 
-.splashbg{
+#splashbg{
     display: none;
 	content: "";
 	position:fixed;
@@ -42,7 +43,7 @@ body.appear{
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg{
+body.appear #splashbg{
     display: block;
     border-radius: 50%;	
 	animation-name:PageAnime;
