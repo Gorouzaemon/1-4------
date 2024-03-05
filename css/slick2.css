@@ -1,6 +1,8 @@
 .slider2 {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:94%;
-     margin:0 auto 80px;
+     margin:0 auto ;
+     display: flex;
+     flex-wrap: wrap;
  }
  
  .slider2 img {
@@ -42,7 +44,9 @@
  /*ドットナビゲーションの設定*/
  
  .slick-dots {
-     margin:20px 0 0 0;
+     margin:20px auto 50px auto;
+     display: flex;
+     justify-content: center;
  }
  
  .slick-dots li {
