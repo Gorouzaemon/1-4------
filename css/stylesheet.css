@@ -78,10 +78,11 @@ body {font-family:
 
 
 @media (max-width:834px){
-    .flex{
-        flex-direction: column;
-    }
+ 
     .flex li{
+        width: 100%;
+    }
+    html{
         width: 100%;
     }
 }
